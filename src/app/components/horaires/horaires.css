@@ -1,0 +1,30 @@
+.horaires-section h2 {
+  color: #2D4A3E;
+  font-weight: bold;
+}
+
+.list-group-item {
+  border-color: rgba(45, 74, 62, 0.15);
+  padding: 1rem 1.25rem;
+  min-height: 44px;
+}
+
+.current-day {
+  background-color: rgba(233, 184, 36, 0.15);
+  border-left: 4px solid #E9B824;
+}
+
+.badge.bg-danger {
+  background-color: #C84B31 !important;
+}
+
+@media (max-width: 599.98px) {
+  .list-group-item {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+}
