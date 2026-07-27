@@ -36,7 +36,7 @@ pnpm install
 pnpm start
 ```
 
-Ouvrir [http://localhost:8080](http://localhost:8080).
+Ouvrir [http://localhost:4200](http://localhost:4200).
 
 ## Auteur
 
