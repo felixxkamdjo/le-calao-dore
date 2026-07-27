@@ -1,0 +1,17 @@
+<header class="app-header">
+  <div class="logo">Le Calao Doré</div>
+
+  <button class="burger" (click)="toggleMenu()" aria-label="Menu">☰</button>
+
+  <nav [class.open]="isMenuOpen">
+    @for (link of links; track link.fragment) {
+      <a
+        routerLink="/"
+        [fragment]="link.fragment"
+        [class.active]="activeLink === link.label"
+        (click)="setActive(link.label)">
+        {{ link.label }}
+      </a>
+    }
+  </nav>
+</header>
