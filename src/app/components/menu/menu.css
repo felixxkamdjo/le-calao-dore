@@ -1,33 +1,110 @@
-.menu-section h2 {
-  color: #2D4A3E;
-  font-weight: bold;
-}
+.menu-section { background-color: #fff; }
 
 .dish-card {
-  border: none;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  background-color: var(--cream, #FAF3E0);
+  border-radius: var(--radius-lg, 1.5rem);
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .dish-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(45, 74, 62, 0.12);
 }
 
-.card-title {
-  color: #2D4A3E;
-  font-weight: bold;
+.dish-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
 }
 
-.price {
-  color: #C84B31;
-  font-size: 1.1rem;
-  margin-top: 0.75rem;
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dish-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill, 50px);
+  color: #fff;
+  backdrop-filter: blur(2px);
+}
+
+.badge-entree { background-color: rgba(45, 74, 62, 0.85); }
+.badge-plat { background-color: rgba(200, 75, 49, 0.85); }
+.badge-dessert { background-color: rgba(233, 184, 36, 0.9); color: var(--forest, #2D4A3E); }
+
+.dish-body {
+  padding: 1.5rem 1.75rem;
+}
+
+.dish-name {
+  color: var(--forest, #2D4A3E);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dish-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.dish-price {
+  color: var(--terracotta, #C84B31);
+  font-weight: 700;
+  font-size: 1.05rem;
   margin-bottom: 0;
 }
 
-.badge {
-  font-size: 0.75rem;
-  padding: 0.4em 0.75em;
+.dish-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.dish-price { margin-bottom: 0; }
+
+.btn-order {
+  background-color: var(--forest, #2D4A3E);
+  color: var(--cream, #FAF3E0);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-pill, 50px);
+  text-decoration: none;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.btn-order:hover {
+  background-color: var(--terracotta, #C84B31);
+  color: #fff;
+}
+
+@media (max-width: 599.98px) {
+  .dish-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .dish-image-wrap { height: 180px; }
 }

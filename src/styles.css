@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --forest: #2D4A3E;
+  --terracotta: #C84B31;
+  --gold: #E9B824;
+  --cream: #FAF3E0;
+  --radius-lg: 1.5rem;
+  --radius-pill: 50px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Fraunces', serif;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--terracotta);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.section-intro {
+  color: #666;
+  max-width: 520px;
+  margin: 0.75rem auto 0;
+}
+
+.btn-pill {
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-pill-primary {
+  background-color: var(--forest);
+  color: var(--cream);
+}
+.btn-pill-primary:hover {
+  background-color: var(--terracotta);
+  color: #fff;
+}
+
+.btn-pill-outline {
+  background-color: transparent;
+  border-color: var(--forest);
+  color: var(--forest);
+}
+.btn-pill-outline:hover {
+  background-color: var(--forest);
+  color: var(--cream);
+}
+
+html { scroll-behavior: smooth; }

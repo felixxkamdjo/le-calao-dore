@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
-export class Footer {}
+export class Footer {
+  public tagline: string = 'Le goût du Cameroun, servi avec cœur depuis 15 ans à Akwa.';
+}

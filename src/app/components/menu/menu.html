@@ -1,30 +1,45 @@
-<section id="menu" class="container py-5 menu-section">
-  <h2 class="text-center mb-5">Notre menu</h2>
+<section id="menu" class="menu-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h2 class="section-title">{{ title }}</h2>
+      <p class="section-intro">{{ intro }}</p>
+    </div>
 
-  <div class="row">
-    @for (dish of dishes; track dish.id) {
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card h-100 dish-card">
-          <div class="card-body">
-            <span
-              class="badge"
-              [class.bg-success]="dish.category === 'entree'"
-              [class.bg-danger]="dish.category === 'plat'"
-              [class.bg-warning]="dish.category === 'dessert'"
-              [class.text-dark]="dish.category === 'dessert'">
-              @switch (dish.category) {
-                @case ('entree') { Entrée }
-                @case ('plat') { Plat }
-                @case ('dessert') { Dessert }
-              }
-            </span>
+    <div class="row g-4">
+      @for (dish of dishes; track dish.id) {
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="dish-card">
+            <div class="dish-image-wrap">
+              <img [src]="dish.image" [alt]="dish.name" class="dish-image">
+              <span class="dish-badge"
+                [ngClass]="{
+                  'badge-entree': dish.category === 'entree',
+                  'badge-plat': dish.category === 'plat',
+                  'badge-dessert': dish.category === 'dessert'
+                }">
+                @switch (dish.category) {
+                  @case ('entree') { Entrée }
+                  @case ('plat') { Plat }
+                  @case ('dessert') { Dessert }
+                }
+              </span>
+            </div>
 
-            <h5 class="card-title mt-2">{{ dish.name }}</h5>
-            <p class="card-text text-muted">{{ dish.description }}</p>
-            <p class="price fw-bold">{{ dish.price }} {{ currency }}</p>
+            <div class="dish-body">
+              <h5 class="dish-name">{{ dish.name }}</h5>
+              <p class="dish-description">{{ dish.description }}</p>
+
+              <div class="dish-footer">
+                <p class="dish-price">{{ dish.price | currency:'XAF':'symbol':'1.0-0' }}</p>
+                <a [href]="orderLink(dish.name)" target="_blank" rel="noopener" class="btn-order">
+                  Commander
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    }
+      }
+    </div>
   </div>
 </section>

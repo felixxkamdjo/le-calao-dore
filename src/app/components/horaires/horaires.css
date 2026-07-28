@@ -1,30 +1,49 @@
-.horaires-section h2 {
-  color: #2D4A3E;
-  font-weight: bold;
+.horaires-section { background-color: #fff; }
+
+.horaires-card {
+  background-color: var(--cream, #FAF3E0);
+  border-radius: var(--radius-lg, 1.5rem);
+  padding: 1rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.06);
 }
 
-.list-group-item {
-  border-color: rgba(45, 74, 62, 0.15);
-  padding: 1rem 1.25rem;
+.horaires-list { list-style: none; margin: 0; padding: 0; }
+
+.horaires-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid rgba(45, 74, 62, 0.08);
   min-height: 44px;
 }
 
-.current-day {
-  background-color: rgba(233, 184, 36, 0.15);
-  border-left: 4px solid #E9B824;
+.horaires-list li:last-child { border-bottom: none; }
+
+.jour { font-weight: 700; color: var(--forest, #2D4A3E); }
+.horaire { color: #555; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+
+.statut {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill, 50px);
 }
 
-.badge.bg-danger {
-  background-color: #C84B31 !important;
+.statut.ferme { background-color: rgba(200, 75, 49, 0.12); color: var(--terracotta, #C84B31); }
+.statut.ouvert { background-color: rgba(45, 74, 62, 0.12); color: var(--forest, #2D4A3E); }
+
+.current-day {
+  background-color: rgba(233, 184, 36, 0.12);
+  border-radius: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 @media (max-width: 599.98px) {
-  .list-group-item {
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .badge {
-    font-size: 0.75rem;
-  }
+  .horaires-card { padding: 1rem; }
+  .horaires-list li { flex-wrap: wrap; gap: 0.4rem; }
 }

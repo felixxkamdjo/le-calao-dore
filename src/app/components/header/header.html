@@ -1,17 +1,23 @@
 <header class="app-header">
-  <div class="logo">Le Calao Doré</div>
+  <div class="logo">
+    <img src="assets/favicon.png" alt="Le Calao Doré" class="logo-img">
+    <span>Le Calao Doré</span>
+  </div>
 
   <button class="burger" (click)="toggleMenu()" aria-label="Menu">☰</button>
 
   <nav [class.open]="isMenuOpen">
-    @for (link of links; track link.fragment) {
+    @for (link of links; track link) {
       <a
+        [class.active]="activeLink === link.label"
         routerLink="/"
         [fragment]="link.fragment"
-        [class.active]="activeLink === link.label"
         (click)="setActive(link.label)">
         {{ link.label }}
       </a>
     }
+    <!-- <a href="#contact" class="btn-pill btn-pill-primary reserve-btn-mobile">Réserver</a> -->
   </nav>
+
+  <a href="#contact" class="btn-pill btn-pill-primary reserve-btn-desktop">Réserver une table</a>
 </header>

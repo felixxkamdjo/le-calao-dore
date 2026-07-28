@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './hero.css',
 })
 export class Hero {
-  public backgroundImage: string = '/assets/hero-restaurant.jpeg';
-  public title: string = 'Saveurs authentiques du Cameroun';
-  public subtitle: string = '15 ans de tradition culinaire à Douala';
+  public heroImage: string = '/assets/hero-restaurant.jpeg';
+  public eyebrow: string = 'Cuisine camerounaise, cœur d\'Akwa';
+  public title: string = 'Des saveurs qui racontent Douala';
+  public subtitle: string = 'Depuis 10 ans, Le Calao Doré réunit à table le Ndolè des grand-mères, le Poulet DG du dimanche et une hospitalité qui se transmet, plat après plat.';
 }

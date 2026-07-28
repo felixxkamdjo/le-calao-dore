@@ -14,6 +14,9 @@ interface Horaire {
   styleUrl: './horaires.css',
 })
 export class Horaires {
+  public eyebrow: string = 'Ouverture';
+  public title: string = 'Nos horaires';
+  
   public horaires: Horaire[] = [
     { jour: 'Lundi', ouverture: '11h00', fermeture: '22h00', ferme: false },
     { jour: 'Mardi', ouverture: '11h00', fermeture: '22h00', ferme: false },

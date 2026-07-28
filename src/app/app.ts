@@ -9,7 +9,7 @@ import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Hero, Menu, Temoignages, Horaires, Footer],
+  imports: [Header, Hero, Menu, Temoignages, Horaires, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

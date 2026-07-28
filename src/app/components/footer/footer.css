@@ -1,57 +1,70 @@
 .footer {
-  background-color: #2D4A3E;
-  color: #FAF3E0;
+  background-color: var(--forest, #2D4A3E);
+  color: var(--cream, #FAF3E0);
 }
 
-.footer h5 {
-  color: #E9B824;
+.footer-brand {
+  font-family: 'Fraunces', serif;
+  color: var(--gold, #E9B824);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-tagline {
+  color: rgba(250, 243, 224, 0.85);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+  display: flex;
+}
+
+.socials a svg {
+  display: block;
+}
+
+.footer h5:not(.footer-brand) {
+  color: var(--gold, #E9B824);
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.footer p {
-  color: #FAF3E0;
-  margin-bottom: 0.5rem;
-}
+.footer p { color: var(--cream, #FAF3E0); margin-bottom: 0.5rem; }
 
-.socials, .list-unstyled {
+.socials { display: flex; gap: 0.75rem; }
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(250, 243, 224, 0.12);
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
 }
+.socials a:hover { background-color: var(--gold, #E9B824); }
 
-.footer a, .list-unstyled a {
-  color: #FAF3E0;
+.footer ul {
+  list-style: none;
+  padding: 0;
+ }
+
+.footer ul li a {
+  color: var(--cream, #FAF3E0);
   text-decoration: none;
   min-height: 44px;
   display: flex;
   align-items: center;
+  /* justify-content: center; */
 }
+.footer ul li a:hover { color: var(--gold, #E9B824); }
 
-.footer a:hover {
-  color: #E9B824;
-}
-
-.footer ul li {
-  margin-bottom: 0.25rem;
-}
-
-.footer hr {
-  border-color: rgba(250, 243, 224, 0.2);
-  margin: 1.5rem 0 1rem;
-}
-
-.footer .text-center {
-  color: rgba(250, 243, 224, 0.7);
-  font-size: 0.9rem;
-}
+.footer hr { border-color: rgba(250, 243, 224, 0.2); margin: 1.5rem 0 1rem; }
+.footer .text-center { color: rgba(250, 243, 224, 0.7); font-size: 0.9rem; }
 
 @media (max-width: 599.98px) {
-  .footer .col-12 {
-    text-align: center;
-  }
-
-  .socials, .list-unstyled {
-    align-items: center;
-  }
+  .footer .col-12 { text-align: center; }
+  .socials { justify-content: center; }
 }

@@ -1,24 +1,29 @@
 <section class="testimonials-section py-5">
   <div class="container">
-    <h2 class="text-center mb-5">Ce qu'ils en disent</h2>
+    <div class="text-center mb-5">
+      <span class="eyebrow">{{ eyebrow }}</span>
+      <h2 class="section-title">{{ title }}</h2>
+    </div>
 
-    <div class="row">
+    <div class="row g-4">
       @for (t of testimonials; track t.id) {
-        <div class="col-12 col-md-4 mb-3">
-          <div
-            class="testimonial-card p-4"
-            [class.bg-success]="t.rating > 3"
-            [class.bg-warning]="t.rating === 3"
-            [class.bg-danger]="t.rating < 3">
-
-            <div class="stars mb-2">
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card">
+            <div class="stars">
               @for (star of getStars(t.rating); track $index) {
                 <span>⭐</span>
               }
             </div>
 
-            <p class="testimonial-text">{{ t.text }}</p>
-            <p class="testimonial-author fw-bold">- {{ t.name }}</p>
+            <p class="testimonial-text">« {{ t.text }} »</p>
+
+            <div class="testimonial-author">
+              <div class="avatar">{{ getInitials(t.name) }}</div>
+              <div>
+                <p class="author-name">{{ t.name }}</p>
+                <p class="author-context">{{ t.context }}</p>
+              </div>
+            </div>
           </div>
         </div>
       }
