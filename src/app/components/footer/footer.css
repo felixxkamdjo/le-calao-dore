@@ -56,8 +56,9 @@
   text-decoration: none;
   min-height: 44px;
   display: flex;
+  /* width: 100%; */
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .footer ul li a:hover { color: var(--gold, #E9B824); }
 

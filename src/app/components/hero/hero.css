@@ -39,6 +39,7 @@
 .hero-socials {
   display: flex;
   justify-content: center;
+  align-items: row;
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -59,6 +60,27 @@
 .hero-socials a svg {
   display: block;
 }
+
+.hero-socials ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  gap: 0.8rem;
+ }
+
+.hero-socials ul li a {
+  color: var(--cream, #FAF3E0);
+  text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-socials ul li a:hover { color: var(--gold, #E9B824); }
+
 
 @media (max-width: 599.98px) {
   .hero-title { font-size: 2.1rem; }
